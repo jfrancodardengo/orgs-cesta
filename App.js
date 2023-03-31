@@ -3,6 +3,8 @@ import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-googl
 
 import Cesta from './src/telas/Cesta';
 
+import mock from './src/mocks/cesta';
+
 export default function App() {
   let [fonteCarregada] = useFonts({
     "MontserratRegular": Montserrat_400Regular,
@@ -16,7 +18,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Cesta />
+      <Cesta {...mock}/>
     </SafeAreaView>
   );
 }
